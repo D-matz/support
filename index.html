@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-body {font-family: "Lato", sans-serif;}
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
 
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
 .tablink {
   background-color: #555;
   color: white;
@@ -14,51 +22,182 @@ body {font-family: "Lato", sans-serif;}
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 25%;
+  width: 10%;
 }
 
 .tablink:hover {
   background-color: #777;
 }
 
-/* Style the tab content */
+/* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   color: white;
   display: none;
-  padding: 50px;
-  text-align: center;
+  padding: 100px 20px;
+  height: 100%;
 }
 
-#London {background-color:red;}
-#Paris {background-color:green;}
-#Tokyo {background-color:blue;}
-#Oslo {background-color:orange;}
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+} 
+ 
+#Home {background-color: red;}
+#News {background-color: green;}
+#Contact {background-color: blue;}
+#About {background-color: orange;}
+#Soraka {background-color: purple;}
+#Sona {background-color: cyan;}
+#Zilean {background-color: yellow;}
+  
 </style>
-  </head>
-  <body>
-    <p>Click on the buttons inside the tabbed menu:</p>
-    <div id="London" class="tabcontent">
-      <h1>London</h1>
-      <p>London is the capital city of England.</p>
-    </div>
-    <div id="Paris" class="tabcontent">
-      <h1>Paris</h1>
-      <p>Paris is the capital of France.</p>
-    </div>
-    <div id="Tokyo" class="tabcontent">
-      <h1>Tokyo</h1>
-      <p>Tokyo is the capital of Japan.</p>
-    </div>
-    <div id="Oslo" class="tabcontent">
-      <h1>Oslo</h1>
-      <p>Oslo is the capital of Norway.</p>
-    </div>
-    <button class="tablink" onclick="openCity('London', this, 'red')" id="defaultOpen">London</button>
-    <button class="tablink" onclick="openCity('Paris', this, 'green')">Paris</button>
-    <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
-    <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button>
-    <script>
-function openCity(cityName,elmnt,color) {
+</head>
+<body>
+  <p> what if i put text here </p>
+  
+  <nav class="fixed-nav-bar">
+<button class="tablink" onclick="openPage('Home', this, 'red')">Windspeaker's Blessing</button>
+<button class="tablink" onclick="openPage('News', this, 'green')">Si Vis Pacem</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Dirty Paws</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Taste Of Purple</button>
+<button class="tablink" onclick="openPage('Soraka', this, 'purple')">Bananas Foster</button>
+<button class="tablink" onclick="openPage('Zilean', this, 'yellow')">The Grateful Dead</button>
+<button class="tablink" onclick="openPage('Sona', this, 'cyan')">Clever Sona Title</button>
+  </nav>
+    
+<div id="Home" class="tabcontent">
+  <h3>Janna</h3>
+  <p>Home is where the heart is..</p>
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>Karma</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>yuuuuumi :3</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="About" class="tabcontent">
+  <h3>lulu sucks</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+<div id="Sona" class="tabcontent">
+  <h3>Sona</h3>
+  <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+   <p>musical name</p>
+  <br>
+</div>  
+  
+<div id="Soraka" class="tabcontent">
+  <h3>landrys here we go</h3>
+  <p>healing</p>
+</div>
+  
+<div id="Zilean" class="tabcontent">
+  <h3>sweet evelynn and shes my hearts delight</h3>
+  <p>slows</p>
+</div>
+
+<script>
+function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -68,12 +207,17 @@ function openCity(cityName,elmnt,color) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = color;
-
 }
+
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-  </body>
-</html>
+
+  <h2>I am better than you so listen to me</h4>
+  <p><a href="https://na.op.gg/summoner/userName=thetankman">Visit my OP.GG</a></p>
+  <h4>bla bla bla</h4>
+  
+</body>
+</html> 
