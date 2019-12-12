@@ -11,6 +11,23 @@ body, html {
   margin: 0;
   font-family: Arial;
 }
+  
+.container {
+    text-align: center;
+    border: 1px dashed #f0f
+}
+.container > div {
+    width: 30px;
+    height: 30px;
+    border: 1px solid blue;
+    
+    display: inline-block;
+    vertical-align: top;
+    
+    /* if you need IE7 support */
+    *display: inline;
+    zoom: 1
+}
 
 /* Style tab links */
 .tablink {
@@ -59,9 +76,7 @@ body, html {
 </style>
 </head>
  <link rel="icon" href="icon.png">
-<body>
-  <p> what if i put text here </p>
-  
+<body>  
   <nav class="fixed-nav-bar">
 <div><button class="tablink" onclick="openPage('Janna', this, 'red')">Windspeaker's Blessing</button></div>
 <div><button class="tablink" onclick="openPage('Karma', this, 'green')">Si Vis Pacem</button></div>
@@ -75,6 +90,9 @@ body, html {
 <div id="Janna" class="tabcontent">
   <h3>Janna</h3>
   <p>Home is where the heart is..</p>
+  <div class="container">
+    <div></div><div></div><div></div><div></div><div></div>
+</div>
 </div>
 
 <div id="Karma" class="tabcontent">
