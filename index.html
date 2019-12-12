@@ -60,7 +60,7 @@ body, html {
   z-index: 9999;
   width: 100%;
   height: 50px;
-  background-color: #000000;
+  background-color: #FFFFFF;
   display: inline-block;
   vertical-align: top;
 } 
@@ -220,7 +220,7 @@ body, html {
 
 <script>
 function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
+  var i, tabcontent, tablinks, navbar;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -229,8 +229,10 @@ function openPage(pageName,elmnt,color) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
   }
-  document.getElementById(pageName).style.display = "block";
+  document.getElementById(pageName).style.display = "block";  
   elmnt.style.backgroundColor = color;
+  navbar = document.getElementsByClassName("fixed-nav-bar");
+  navbar.style.backgroundColor = color;
 }
 
 // Get the element with id="defaultOpen" and click on it
