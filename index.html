@@ -37,6 +37,16 @@ body, html {
   height: 100%;
 }
 
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 50px;
+  background-color: #00a087;
+} 
+ 
 #Home {background-color: red;}
 #News {background-color: green;}
 #Contact {background-color: blue;}
@@ -48,13 +58,15 @@ body, html {
 </head>
 <body>
 
+  <nav class="fixed-nav-bar">
 <button class="tablink" onclick="openPage('Home', this, 'red')">Windspeaker's Blessing</button>
 <button class="tablink" onclick="openPage('News', this, 'green')">Si Vis Pacem</button>
 <button class="tablink" onclick="openPage('Contact', this, 'blue')">Dirty Paws</button>
 <button class="tablink" onclick="openPage('About', this, 'orange')">Taste Of Purple</button>
 <button class="tablink" onclick="openPage('Soraka', this, 'purple')">Bananas Foster</button>
 <button class="tablink" onclick="openPage('Zilean', this, 'yellow')">The Grateful Dead</button>
-  
+  </nav>
+    
 <div id="Home" class="tabcontent">
   <h3>Janna</h3>
   <p>Home is where the heart is..</p>
