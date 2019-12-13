@@ -1,242 +1,292 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}
 
-/* Set height of body and the document to 100% */
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        box-sizing: border-box;
+        margin:0;
+        padding:0;
+      }
+      
+      /* Set height of body and the document to 100% */
+      body,
+      html {;
+        font-family: Arial;
+        scroll-behavior: smooth
+      }
 
-.container{
-  text-align: center;
-}
-  
-.container > div {
-    width: 10%;
-    height: 30px;
-    
-    display: inline-block;
-    vertical-align: top;
-    
-    /* if you need IE7 support */
-    *display: inline;
-    zoom: 1
-}
+      .navbar {
+        background-color: none;
+      }
 
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 10%;
-}
+      .center {
+        top: 0;
+        font: Ubuntu;
+        margin: auto;
+        text-align: center;
+        height: 150px;
+        background-color: "#BBBBBB";
+      }
 
-.tablink:hover {
-  background-color: #777;
-}
+      .content {
+        padding: 16px;
+      }
 
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
+      .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      
+      a:link {
+        text-decoration: none;
+        color: black;
+      }
 
-.fixed-nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  width: 100%;
-  height: 150px;
-  background-color: #FFFFFF;
-  vertical-align: top;
-} 
- 
-#Janna {background-color: red;}
-#Karma {background-color: green;}
-#Yuumi {background-color: blue;}
-#Lulu {background-color: orange;}
-#Soraka {background-color: purple;}
-#Sona {background-color: cyan;}
-#Zilean {background-color: yellow;}
-  
-</style>
-</head>
- <link rel="icon" href="icon.png">
-<body>  
-  <nav id = "heading" class="fixed-nav-bar">
-    <div id = "container" class = "container">
-<button class="tablink" onclick="openPage('Janna', this, 'red')"><img src="Faces/Janna.png" alt="Janna">Windspeaker's Blessing</button>
-<button class="tablink" onclick="openPage('Karma', this, 'green')"><img src="Faces/Karma.png" alt="Karma">Si Vis Pacem</button>
-<button class="tablink" onclick="openPage('Yuumi', this, 'blue')"><img src="Faces/Yuumi.png" alt="Yuumi">Dirty Paws</button>
-<button class="tablink" onclick="openPage('Lulu', this, 'orange')"><img src="Faces/Lulu.png" alt="Lulu">A Taste Of Purple</button>
-<button class="tablink" onclick="openPage('Sona', this, 'cyan')"><img src="Faces/Sona.png" alt="Sona">Clever Sona Title</button>
-<button class="tablink" onclick="openPage('Soraka', this, 'purple')"><img src="Faces/Soraka.png" alt="Soraka">Bananas Foster</button>
-<button class="tablink" onclick="openPage('Zilean', this, 'yellow')"><img src="Faces/Zilean.png" alt="Zilean">The Grateful Dead</button>
+      a:visited {
+        text-decoration: none;
+        color: black;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      a:active {
+        text-decoration: underline;
+      }
+
+      .sticky+.content {
+        padding-top: 60px;
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .container>div {
+        width: 10%;
+        height: 30px;
+
+        display: inline-block;
+        vertical-align: top;
+
+        /* if you need IE7 support */
+        *display: inline;
+        zoom: 1
+      }
+
+      /* Style tab links */
+      .tablink {
+        text-align: center;
+        color: black;
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 10%;
+      }
+      
+      .tablink:hover {
+        text-align: center;
+        font-size: 20px;
+      }
+
+      /* Style the tab content (and add height:100% for full page content) */
+      .tabcontent {
+        display: none;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <link rel="icon" href="icon.png">
+
+  <body>
+
+    <div id="greeting" class="center">
+      <h1><a href="https://na.op.gg/summoner/userName=thetankman">The Tank Man</a></h1>
+      <h2>win lane steadily</h2>
+      <h2>carry teamfights</h2>
+      <h4>to improve, do as much as you can, even at risk of dying</h4>
+      <h4>in replays, find places you died, or places you could have done more</h4>
+      <h5>to learn what habits you need to build to use a champion effectively, click its portrait</h5>
     </div>
-  </nav>
-    
-<div id="Janna" class="tabcontent">
-  <h3>Janna</h3>
-  <p>Home is where the heart is..</p>
-  <div class="container">
-    <div></div><div></div><div></div><div></div><div></div>
-</div>
-</div>
 
-<div id="Karma" class="tabcontent">
-  <h3>Karma</h3>
-  <p>Some news this fine day!</p> 
-</div>
+     <div style="height:200px;">
+      <div id="heading" class="container">
+        <button class="tablink" onclick="openPage('Janna', '#59DCD8')"><img src="Faces/Janna.png" alt="Janna">Windspeaker's Blessing</button>
+        <button class="tablink" onclick="openPage('Karma', '#80DCA8')"><img src="Faces/Karma.png" alt="Karma">Si Vis Pacem</button>
+        <button class="tablink" onclick="openPage('Lulu', '#E4B9FE')"><img src="Faces/Lulu.png" alt="Lulu">A Taste Of Purple</button>
+        <button class="tablink" onclick="openPage('Sona', '#98CFFE')"><img src="Faces/Sona.png" alt="Sona">A Song Of Clown And Schuhbart</button>
+        <button class="tablink" onclick="openPage('Soraka', '#FFB1E8')"><img src="Faces/Soraka.png" alt="Soraka">Bananas Foster</button>
+        <button class="tablink" onclick="openPage('Yuumi', '#FABC9C')"><img src="Faces/Yuumi.png" alt="Yuumi">Dirty Paws</button>
+        <button class="tablink" onclick="openPage('Zilean', '#E3C684')"><img src="Faces/Zilean.png" alt="Zilean">The Grateful Dead</button>
+      </div>
+    </div>
+      
+    <div id="Janna" class="tabcontent">
+      <h3>Janna</h3>
+      <p>Home is where the heart is..</p>
+    </div>
 
-<div id="Yuumi" class="tabcontent">
-  <h3>yuuuuumi :3</h3>
-  <p>Get in touch, or swing by for a cup of coffee.</p>
-</div>
+    <div id="Karma" class="tabcontent">
+      <h3>Karma</h3>
+      <p>Some news this fine day!</p>
+    </div>
 
-<div id="Lulu" class="tabcontent">
-  <h3>lulu sucks</h3>
-  <p>Who we are and what we do.</p>
-</div>
+    <div id="Yuumi" class="tabcontent">
+      <h3>yuuuuumi :3</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
 
-<div id="Sona" class="tabcontent">
-  <h3>Sona</h3>
-  <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-   <p>musical name</p>
-  <br>
-</div>  
-  
-<div id="Soraka" class="tabcontent">
-  <h3>landrys here we go</h3>
-  <p>healing</p>
-</div>
-  
-<div id="Zilean" class="tabcontent">
-  <h3>sweet evelynn and shes my hearts delight</h3>
-  <p>slows</p>
-</div>
+    <div id="Lulu" class="tabcontent">
+      <h3>lulu sucks</h3>
+      <p>Who we are and what we do.</p>
+    </div>
 
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";  
-  elmnt.style.backgroundColor = color;
-	document.getElementById("heading").style.backgroundColor = color;
-}
+    <div id="Sona" class="tabcontent">
+      <h3>Sona</h3>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+      <p>musical name</p>
+      <br>
+    </div>
 
-</script>
+    <div id="Soraka" class="tabcontent">
+      <h3>landrys here we go</h3>
+      <p>healing</p>
+    </div>
 
-  <h2>I am better than you so listen to me</h2>
-  <p><a href="https://na.op.gg/summoner/userName=thetankman">Visit my OP.GG</a></p>
-  <h4>bla bla bla</h4>
-  
-</body>
-</html> 
+    <div id="Zilean" class="tabcontent">
+      <h3>sweet evelynn and shes my hearts delight</h3>
+      <p>slows</p>
+    </div>
+
+    <script>
+      window.onscroll = function() {
+        myFunction()
+      };
+
+      var navbar = document.getElementById("heading");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
+
+      function openPage(champ, color) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        var page = document.getElementById(champ);
+        page.style.display = "block";
+        page.style.backgroundColor = color;
+        document.getElementById("heading").scrollIntoView();
+      }
+
+    </script>
+
+
+  </body>
+
+</html>
