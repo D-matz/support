@@ -10,7 +10,11 @@ body, html {
   margin: 0;
   font-family: Arial;
 }
-  
+
+.navbar {
+  background-color: none;
+}
+
 .center {
   margin: auto;
   text-align: center;
@@ -86,8 +90,7 @@ body, html {
   <h4>bla bla bla</h4>
   </div>
 
-  <nav id = "heading" class="navbar">
-    <div id = "container" class = "container">
+    <div id = "heading" class = "container">
 <button class="tablink" onclick="openPage('Janna', this, 'red')"><img src="Faces/Janna.png" alt="Janna">Windspeaker's Blessing</button>
 <button class="tablink" onclick="openPage('Karma', this, 'green')"><img src="Faces/Karma.png" alt="Karma">Si Vis Pacem</button>
 <button class="tablink" onclick="openPage('Lulu', this, 'orange')"><img src="Faces/Lulu.png" alt="Lulu">A Taste Of Purple</button>
@@ -96,7 +99,6 @@ body, html {
 <button class="tablink" onclick="openPage('Yuumi', this, 'blue')"><img src="Faces/Yuumi.png" alt="Yuumi">Dirty Paws</button>
 <button class="tablink" onclick="openPage('Zilean', this, 'yellow')"><img src="Faces/Zilean.png" alt="Zilean">The Grateful Dead</button>
     </div>
-  </nav>
   
 <div id="Janna" class="tabcontent">
   <h3>Janna</h3>
@@ -250,8 +252,8 @@ function openPage(pageName,color) {
   }
   document.getElementById(pageName).style.display = "block";  
 document.body.style.backgroundColor = color;
-document.getElementById(pageName).style.display = color;  
-document.getElementById("heading").style.display = color;  
+document.getElementById(pageName).style.backgroundColor = color;  
+document.getElementById("container").style.backgroundColor = color;  
 }
 </script>
 
