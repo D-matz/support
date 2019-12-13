@@ -241,14 +241,13 @@ function myFunction() {
 }
 
 
-function openPage(pageName,elmnt,color) {
+function openPage(pageName,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
   document.getElementById(pageName).style.display = "block";  
-  elmnt.style.backgroundColor = color;
 document.body.style.backgroundColor = color;
 }
 </script>
