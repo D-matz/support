@@ -10,6 +10,31 @@ body, html {
   margin: 0;
   font-family: Arial;
 }
+
+
+
+.navbar a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
 .container{
   text-align: center;
 }
@@ -74,7 +99,7 @@ body, html {
   <p><a href="https://na.op.gg/summoner/userName=thetankman">Visit my OP.GG</a></p>
   <h4>bla bla bla</h4>
 
-  <nav id = "heading" class="fixed-nav-bar">
+  <nav id = "heading" class="navbar">
     <div id = "container" class = "container">
 <button class="tablink" onclick="openPage('Janna', this, 'red')"><img src="Faces/Janna.png" alt="Janna">Windspeaker's Blessing</button>
 <button class="tablink" onclick="openPage('Karma', this, 'green')"><img src="Faces/Karma.png" alt="Karma">Si Vis Pacem</button>
@@ -216,6 +241,20 @@ body, html {
 </div>
 
 <script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("heading");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+
 function openPage(pageName,elmnt,color) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
