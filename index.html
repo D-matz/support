@@ -4,14 +4,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box}
-
 /* Set height of body and the document to 100% */
 body, html {
   height: 100%;
   margin: 0;
   font-family: Arial;
 }
-
 .container{
   text-align: center;
 }
@@ -27,7 +25,6 @@ body, html {
     *display: inline;
     zoom: 1
 }
-
 /* Style tab links */
 .tablink {
   background-color: #555;
@@ -39,11 +36,9 @@ body, html {
   font-size: 17px;
   width: 10%;
 }
-
 .tablink:hover {
   background-color: #777;
 }
-
 /* Style the tab content (and add height:100% for full page content) */
 .tabcontent {
   color: white;
@@ -51,10 +46,9 @@ body, html {
   padding: 100px 20px;
   height: 100%;
 }
-
 .fixed-nav-bar {
   position: fixed;
-  top: 0;
+  top: 200px;
   left: 0;
   z-index: 9999;
   width: 100%;
@@ -75,6 +69,12 @@ body, html {
 </head>
  <link rel="icon" href="icon.png">
 <body>  
+
+
+  <h2>I am better than you so listen to me</h2>
+  <p><a href="https://na.op.gg/summoner/userName=thetankman">Visit my OP.GG</a></p>
+  <h4>bla bla bla</h4>
+
   <nav id = "heading" class="fixed-nav-bar">
     <div id = "container" class = "container">
 <button class="tablink" onclick="openPage('Janna', this, 'red')"><img src="Faces/Janna.png" alt="Janna">Windspeaker's Blessing</button>
@@ -86,7 +86,7 @@ body, html {
 <button class="tablink" onclick="openPage('Zilean', this, 'yellow')"><img src="Faces/Zilean.png" alt="Zilean">The Grateful Dead</button>
     </div>
   </nav>
-    
+  
 <div id="Janna" class="tabcontent">
   <h3>Janna</h3>
   <p>Home is where the heart is..</p>
@@ -231,12 +231,8 @@ function openPage(pageName,elmnt,color) {
   elmnt.style.backgroundColor = color;
 	document.getElementById("heading").style.backgroundColor = color;
 }
-
 </script>
 
-  <h2>I am better than you so listen to me</h2>
-  <p><a href="https://na.op.gg/summoner/userName=thetankman">Visit my OP.GG</a></p>
-  <h4>bla bla bla</h4>
   
 </body>
 </html> 
