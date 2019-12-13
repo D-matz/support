@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 
@@ -248,7 +249,6 @@
 
 
       function openPage(pageName, color, b) {
-        alert("?");
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
@@ -256,10 +256,10 @@
         }
         document.getElementById(pageName).style.display = "block";
         document.body.style.backgroundColor = color;
-        alert("!");
-        var c = document.getElementById("Zilean");
-        alert(c.id);
-        c.scrollIntoView();
+         var div = document.getElementById("greeting");
+         alert(div.id+" "+div.scrollHeight);
+ 				 window.scrollTo(0, b.scrollHeight);
+         alert("?");
       }
 
     </script>
