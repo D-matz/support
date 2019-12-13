@@ -272,14 +272,15 @@
       }
 
 
-      function openPage(pageName, color) {
+      function openPage(champ, color) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";
         }
-        document.getElementById(pageName).style.display = "block";
-        document.body.style.backgroundColor = color;
+        var page = document.getElementById(champ);
+        page.style.display = "block";
+        page.style.backgroundColor = color;
         document.getElementById("greeting").style.backgroundColor = "#F5F5F5";
          var header = document.getElementById("heading");
          header.scrollIntoView();
