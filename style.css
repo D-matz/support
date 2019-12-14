@@ -12,10 +12,6 @@
         scroll-behavior: smooth
       }
 
-      .navbar {
-        background-color: none;
-      }
-
       .center {
         display: inline-block;
         top: 0;
