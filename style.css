@@ -94,3 +94,9 @@
         display: none;
         height: 100%;
       }
+
+     .tabtext{
+        color: "green";
+        z-index: 50;
+        height: 100%;
+      }
