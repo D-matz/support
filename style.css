@@ -23,7 +23,6 @@
         text-align: center;
         height: 250px;
         width: 100%;
-        background-color: "#112233";
       }
 
       .sticky {
@@ -88,13 +87,12 @@
         font-size: 20px;
       }
 
+     .tabtext {
+        color: "green";
+     }
       /* Style the tab content (and add height:100% for full page content) */
       .tabcontent {
         text-align: center;
         display: none;
         height: 100%;
-      }
-
-     .tabtext {
-        color: "green";
-      }
+     }
