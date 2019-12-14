@@ -84,7 +84,7 @@
       }
 
      .tabtext {
-        z-index: -60;
+        z-index: -260;
         font-size: 10px;
         background-color: "red";
      }
