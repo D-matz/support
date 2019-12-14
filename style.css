@@ -88,7 +88,7 @@
       }
 
      .tabtext {
-        color: "green";
+        text-size: 10px;
      }
       /* Style the tab content (and add height:100% for full page content) */
       .tabcontent {
