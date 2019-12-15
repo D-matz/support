@@ -70,7 +70,7 @@
         }
 
       .outer{
-        height: 130px;
+        height: 137px;
       }
 
       .sticky {
@@ -81,11 +81,17 @@
 
     .sticky2 {
       position: fixed;
-      top: 130px;
+      top: 137px;
       width: 100%;
     }
 
+.sticky + .content {
+  padding-top: 60px;
+}
 
+.sticky2 + .content {
+  padding-top: 60px;
+}
 
       /* Style tab links */
       .tablink {
@@ -102,7 +108,7 @@ transform: scale(1.25);
       }
 
      .tabtext {
-         height: 120px;
+         height: 130px;
          text-align: center;
          vertical-align: top;
          border: none;
