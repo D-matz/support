@@ -73,6 +73,38 @@
         height: 137px;
       }
 
+.right{
+    position: relative;
+    left: 50px;
+    padding: 0px;
+       width: -webkit-calc(100% - 50px);
+        width:    -moz-calc(100% - 50px);
+        width:         calc(100% - 50px);
+}
+
+.sidenav {
+  height: 200px;
+  width: 160px;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 10px 0px 0px 0px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
       .sticky {
         position: fixed;
         top: 0;
@@ -124,7 +156,7 @@ transform: scale(1.25);
 
       /* Style the tab content (and add height:100% for full page content) */
       .tabcontent {
-        padding: 30px;
+        padding: 0px;
         text-align: left;
         display: none;
         height: 100%;
