@@ -153,6 +153,10 @@ transform: scale(1.25);
          cursor: default;
        }
 
+.title{
+    font-size: 20px;
+    text-align: center;
+}
 
 
       /* Style the tab content (and add height:100% for full page content) */
