@@ -39,7 +39,6 @@
         width: 100%;
       }
 
-
       .container {
         text-align: center;
         z-index: 1;
@@ -51,7 +50,6 @@
       }
 
       .container>div {
-        width: 10%;
         height: 30px;
         display: inline-block;
         /* if you need IE7 support */
@@ -60,7 +58,7 @@
       }
 
       .container2>div {
-          width: 10%;
+          width: 14.2857143%;
           height: 30px;
           display: inline-block;
           text-align: center;
@@ -69,18 +67,16 @@
           zoom: 1
         }
 
+       .iconic {
+         display: table;
+         margin: auto;
+       }
+
       .outer{
         height: 137px;
+        width: 100%;
       }
 
-.right{
-    position: relative;
-    left: 50px;
-    padding: 0px;
-       width: -webkit-calc(100% - 50px);
-        width:    -moz-calc(100% - 50px);
-        width:         calc(100% - 50px);
-}
 
 .sidenav {
   height: 200px;
@@ -131,8 +127,9 @@
         background: none;
         outline: none;
         cursor: pointer;
-        padding: 14px 16px;
-        width: 10%;
+        padding: none;
+        margin: none;
+        width: 14.2857143%;
       }
 
       .tablink:hover {
@@ -148,7 +145,7 @@ transform: scale(1.25);
          outline: none;
          padding: 14px 16px;
          font-size: 17px;
-         width: 10%;
+         width: 14.2857143%;
          cursor: default;
        }
 
@@ -156,8 +153,34 @@ transform: scale(1.25);
 
       /* Style the tab content (and add height:100% for full page content) */
       .tabcontent {
-        padding: 0px;
+        padding: 10px;
         text-align: left;
         display: none;
         height: 100%;
      }
+
+
+
+@media only screen and (max-width: 770px){
+  .center{
+    display: none;
+  }
+  .container2{
+    display: none;
+  }
+
+  tablink {
+          transform: scale(0.5);
+          border: none;
+          background: none;
+          outline: none;
+          cursor: pointer;
+          padding: none;
+          margin: none;
+          width: 14.2857143%;
+        }
+
+        .tablink:hover {
+  transform: scale(0.625);
+        }
+}
