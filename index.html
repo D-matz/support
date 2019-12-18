@@ -465,7 +465,7 @@
         As other enchanters benefit more from AP and heal/shield power, for Zilean you might as well finish active items instead. But these sort of end up being the same items, and the main difference is that censer isn't as core, but it still works ok since the stats aren't bad and with guardian or aery on E as well as font of life and redemption he ends up using censer enough to justify it in some games.
     </p>
         <img src="Icons/zilean.png" class="iconic" alt="Zilean">
-    <p><a href="https://www.youtube.com/watch?v=luAqu8VX5wo">I've enjoyed chilling with Grateful Dead songs while playing. For one thing, it makes tilting impossible. If your cup is full may it be again, and have a nice season 10.</a>
+    <p><a href="https://www.youtube.com/watch?v=luAqu8VX5wo">I've enjoyed chilling with Grateful Dead songs while playing. For one thing, it makes tilting impossible. If your cup is full may it be again, and may you be fulfilled in season 10.</a>
     </div>
     <script>
       window.onscroll = function() {
@@ -474,7 +474,7 @@
 
       var navbar = document.getElementById("heading");
       var navtext = document.getElementById("heading2");
-      var sticky = navbar.offsetTop;
+      var sticky = navbar.offsetTop-13.75;
 
       function myFunction() {
         if (window.pageYOffset >= sticky) {
@@ -499,8 +499,11 @@
         var page = document.getElementById(champ);
         page.style.display = "block";
         page.style.backgroundColor = color;
-        //document.getElementById("heading2").scrollIntoView();
-        window.scrollTo(0,236.25);
+        //document.getElementById("Janna").scrollIntoView();
+        var scroll = (document.getElementsByClassName("outer"))[0];
+        var to = scroll.offsetTop;
+        console.log(to);
+        window.scrollTo(0,to);
       }
 
     </script>
