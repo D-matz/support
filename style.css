@@ -76,7 +76,7 @@
         width: 100%;
       }
       .outer2{
-              height: 80px;
+              height: 90px;
               width: 100%;
             }
 
@@ -116,11 +116,21 @@
       width: 100%;
     }
 
+    .sticky3 {
+            position: fixed;
+            top: 0px;
+            width: 100%;
+          }
+
 .sticky + .content {
   padding-top: 60px;
 }
 
 .sticky2 + .content {
+  padding-top: 60px;
+}
+
+.sticky3 + .content {
   padding-top: 60px;
 }
 
@@ -173,6 +183,14 @@ transform: scale(1.25);
     display: none;
   }
   .container2{
+    display: none;
+  }
+
+  .outer{
+    height: 110px;
+  }
+
+  .outer2{
     display: none;
   }
 
