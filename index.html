@@ -7,7 +7,7 @@
   </head>
   <link rel="icon" href="icon.png">
 
-  <body>
+  <body onresize="myFunction()">
 
     <div id="greeting" class="center">
       <h1><a href="https://na.op.gg/summoner/userName=thetankman">The Tank Man</a></h1>
@@ -504,6 +504,15 @@
         }
       }
 
+    function myFunction() {
+      var w = window.outerWidth;
+        if(w>770)
+        {
+             console.log("resize");
+            var el = document.getElementById("heading");
+            el.classList.remove("sticky3");
+        }
+    }
 
       function openPage(champ, color) {
         var i, tabcontent, tablinks;
@@ -522,7 +531,7 @@
         }
         else
         {
-            window.scrollTo(0,to);
+            window.scrollTo(0,0);
         }
       }
 

@@ -185,11 +185,6 @@ transform: scale(1.25);
   .container2{
     display: none;
   }
-
-  .outer{
-    height: 110px;
-  }
-
   .outer2{
     display: none;
   }
